@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --background-image-nike: url("../src/assets/bg.png");
+  --font-sans: "Poppins", sans-serif;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-scroll-up {
+  animation: scrollUp 20s linear infinite;
+}
+
+.scroll-container:hover .animate-scroll-up {
+  animation-play-state: paused;
+}
+
+html {
+  scroll-behavior: smooth;
+}
